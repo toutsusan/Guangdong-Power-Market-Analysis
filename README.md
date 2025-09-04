@@ -12,7 +12,7 @@
 
 项目适合入门行业的人员参考。
 
-关于python分析ols的代码如下
+关于python做ols回归分析的参考代码如下
 
     import pandas as pd
     import statsmodels.api as sm
