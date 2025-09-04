@@ -11,3 +11,37 @@
 模型R²=0.955，诊断良好，但存在中度共线性。
 
 项目适合入门行业的人员参考。
+
+关于python分析ols的代码如下
+
+import pandas as pd
+import statsmodels.api as sm
+
+# 读取并准备数据
+df = pd.read_csv('文件位置',encoding='UTF-8-SIG')
+
+# 将日期列设为索引
+df['日期'] = pd.to_datetime(df['日期'], format='%Y%m')
+df = df.set_index('日期')
+
+
+# 因变量Y
+Y = df['价格_元_MWh']
+
+# 自变量X (用来预测的特征)
+X = df[['成交量_GWh', '用电侧HHI', '发电侧HHI', '发电侧Top4份额']]
+
+# statsmodels需要手动添加一个常数项
+X = sm.add_constant(X)
+
+# 3. 构建并拟合模型
+model = sm.OLS(Y, X).fit()
+
+with open('存储位置', 'w', encoding='utf-8') as f:
+    f.write(model.summary().as_html())
+
+# 打印成功信息
+print("回归结果已成功导出为以下文件：")
+print("1. 文本格式: regression_results.txt")
+print("2. CSV系数表: regression_coefficients.csv")
+print("3. HTML格式: regression_results.html")
