@@ -1,0 +1,64 @@
+<table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>        <td>价格_元_MWh</td>     <th>  R-squared:         </th> <td>   0.955</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.949</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   163.3</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 23 Aug 2025</td> <th>  Prob (F-statistic):</th> <td>2.35e-20</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>12:25:55</td>     <th>  Log-Likelihood:    </th> <td> -204.97</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>    36</td>      <th>  AIC:               </th> <td>   419.9</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>    31</td>      <th>  BIC:               </th> <td>   427.9</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     4</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th>     <td> 2295.7463</td> <td>  473.631</td> <td>    4.847</td> <td> 0.000</td> <td> 1329.769</td> <td> 3261.724</td>
+</tr>
+<tr>
+  <th>成交量_GWh</th>   <td>    0.0163</td> <td>    0.005</td> <td>    3.570</td> <td> 0.001</td> <td>    0.007</td> <td>    0.026</td>
+</tr>
+<tr>
+  <th>用电侧HHI</th>    <td>    6.9276</td> <td>    0.393</td> <td>   17.610</td> <td> 0.000</td> <td>    6.125</td> <td>    7.730</td>
+</tr>
+<tr>
+  <th>发电侧HHI</th>    <td>   -0.0248</td> <td>    0.249</td> <td>   -0.100</td> <td> 0.921</td> <td>   -0.532</td> <td>    0.482</td>
+</tr>
+<tr>
+  <th>发电侧Top4份额</th> <td>-1517.0780</td> <td>  895.471</td> <td>   -1.694</td> <td> 0.100</td> <td>-3343.402</td> <td>  309.246</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 0.280</td> <th>  Durbin-Watson:     </th> <td>   1.325</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.869</td> <th>  Jarque-Bera (JB):  </th> <td>   0.114</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 0.133</td> <th>  Prob(JB):          </th> <td>   0.945</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 2.930</td> <th>  Cond. No.          </th> <td>1.62e+06</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.62e+06. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
